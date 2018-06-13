@@ -21,25 +21,6 @@
                 x.className = "topnav";
             }
         }
-        function openTab(evt, tabName) {
-            var i, tabcontent, tablinks;
-
-            // Get all elements with class="tabcontent" and hide them
-            tabcontent = document.getElementsByClassName("tabcontent");
-            for (i = 0; i < tabcontent.length; i++) {
-                tabcontent[i].style.display = "none";
-            }
-
-            // Get all elements with class="tablinks" and remove the class "active"
-            tablinks = document.getElementsByClassName("tablinks");
-            for (i = 0; i < tablinks.length; i++) {
-                tablinks[i].className = tablinks[i].className.replace(" active", "");
-            }
-
-            // Show the current tab, and add an "active" class to the button that opened the tab
-            document.getElementById(tabName).style.display = "block";
-            evt.currentTarget.className += " active";
-        }
         </script>
         <style>
         body {
@@ -213,41 +194,7 @@
 div#myTopnav * {
     background-color: #a7a7a7;
 }
-/* Style the tab */
-.tab {
-    overflow: hidden;
-    border: 1px solid #ccc;
-    background-color: #f1f1f1;
-}
-
-/* Style the buttons that are used to open the tab content */
-.tab button {
-    background-color: inherit;
-    float: left;
-    border: none;
-    outline: none;
-    cursor: pointer;
-    padding: 14px 16px;
-    transition: 0.3s;
-}
-
-/* Change background color of buttons on hover */
-.tab button:hover {
-    background-color: #ddd;
-}
-
-/* Create an active/current tablink class */
-.tab button.active {
-    background-color: #ccc;
-}
-
-/* Style the tab content */
-.tabcontent {
-    display: none;
-    padding: 6px 12px;
-    border: 1px solid #ccc;
-    border-top: none;
-}.topnav {
+.topnav {
     overflow: hidden;
     background-color: #a7a7a7;
     position: fixed;
@@ -324,7 +271,7 @@ center.progressdiv {
         <div class="topnav" id="myTopnav">
           <header class="primarys">
             <a href="/" class="active">ACCESSHelp</a>
-            <a href="#" data-toggle="modal" onclick="setTimeout(function(){openTab(event, 'login');},100);" data-target="#login-modal">Login</a>
+            <a href="#" data-toggle="modal" data-target="#help-modal">Welcome</a>
             <a href="#news">News</a>
             <a href="#contact">Contact</a>
             <a href="#about">About</a>
@@ -333,50 +280,21 @@ center.progressdiv {
             </a>
           </header>
       </div>
-      <div class="modal fade" id="login-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
+      <div class="modal fade" id="help-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" style="display: none;">
     	  <div class="modal-dialog">
-				<div class="loginmodal-container">
-          <div class="tab">
-            <button class="tablinks" id="defaultOpen" onclick="openTab(event, 'login')">Login</button>
-            <button class="tablinks" onclick="openTab(event, 'register')">Register</button>
+		  <div class="loginmodal-container">
+            <h1>We're Here</h1><br>
+                    <p>If you ever need help, we're here.  Contact us any time, 24/7</p>
           </div>
-
-          <!-- Tab content -->
-          <div id="login" class="tabcontent">
-            <h1>Login to Your Account</h1><br>
-  				  <form>
-  					<input type="text" name="user" placeholder="Username">
-  					<input type="password" name="pass" placeholder="Password">
-  					<input type="submit" name="login" class="login loginmodal-submit" value="Login">
-  				  </form>
-            <div class="login-help">
-            <a href="#">Forgot Password</a>
-            </div>
-          </div>
-
-          <div id="register" class="tabcontent">
-            <h1>Register an Account</h1><br>
-  				  <form>
-              <input type="text" name="first" placeholder="First Name">
-              <input type="text" name="last" placeholder="Last Name">
-              <input type="text" name="email" placeholder="Email">
-              <input type="text" name="user" placeholder="Username">
-              <input type="password" name="pass" placeholder="Password">
-              <input type="password" name="passconfirm" placeholder="Confirm Password">
-  					<input type="submit" name="register" class="login loginmodal-submit" value="Register">
-  				  </form>
-          </div>
-
-				</div>
-			</div>
-		  </div>
+        </div>
+      </div>
 
       <div class="hero">
           <div class="copy">
               <h1>
                   Tagline Here
               </h1>
-              <a href="#" class="button" data-toggle="modal" onclick="setTimeout(function(){openTab(event, 'login');},100);" data-target="#login-modal">Start Today</a>
+              <a href="#" class="button" data-toggle="modal" data-target="#help-modal">Welcome</a>
           </div>
       </div>
 
