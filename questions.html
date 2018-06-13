@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8" />
-        <title>Boilerplate - A Simple &amp; Semantic Front-End - Imarc</title>
+        <title>ACCESSHelp</title>
         <meta name="description" content="The Imarc Boilerplate is a streamlined starting point for building websites." />
         <meta name="web_author" content="Imarc, A Digital Agency | more info at imarc.com" />
         <meta name="viewport" content="width=device-width" />
@@ -254,18 +254,77 @@ div#myTopnav * {
     width: 100%;
     z-index: 100;
 }
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    border: none;
+    text-align: left;
+    outline: none;
+    font-size: 15px;
+    transition: 0.4s;
+}
+
+.active, .accordion:hover {
+    background-color: #ccc;
+}
+
+.panel {
+    padding: 0 18px;
+    display: none;
+    background-color: white;
+    overflow: hidden;
+}
+.torso {
+    padding-bottom: 0;
+    padding-top: 0rem;
+}
+.container {
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: auto;
+    margin-left: auto;
+}
+fieldset {
+    margin: 10px 0;
+}
+footer.primary {
+    padding: 7px 0;
+    height: 25px;
+    position: fixed;
+    bottom: 0%;
+    width: 100%;
+    border-top: 1px solid gray;
+}
+.shell {
+    margin-bottom: 100px;
+}
+.show {
+  display: block;
+}
+.progressdiv {
+    height: 100px;
+    background: #a7a7a7;
+    position: fixed;
+    width: 100%;
+    bottom: 0%;
+}
+center.progressdiv {
+    padding-top: 26.5px;
+}
         </style>
     </head>
     <body>
       <div class="shell">
         <div class="topnav" id="myTopnav">
           <header class="primarys">
-            <a href="#home" class="active">ACCESSHelp</a>
+            <a href="/" class="active">ACCESSHelp</a>
             <a href="#" data-toggle="modal" onclick="setTimeout(function(){openTab(event, 'login');},100);" data-target="#login-modal">Login</a>
             <a href="#news">News</a>
             <a href="#contact">Contact</a>
             <a href="#about">About</a>
-            <a href="/questions.html">Sample Questions</a>
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
               <i class="fa fa-bars"></i>
             </a>
@@ -321,116 +380,189 @@ div#myTopnav * {
   <div class="torso">
       <div class="container">
           <div class="wrap">
-            <main>
-              <section>
-                  <h2 id="Typography">Introduction</h2>
-
-                  <p>
-                      This app was developed to... <a href="https://accesshelp.org">ACCESS</a>'s mission is to
-                      <em>support</em>, and
-                      <strong>encourage</strong>.
-                  </p>
-
-
-                  <blockquote>
-                        ACCESS has been so wonderful and helpful to me. I can never thank them and my ACCESS Grief Mentor, Elizabeth enough for all they have done to keep me here.
-                  </blockquote>
-                  <small>- Barbara Zimet</small>
-              </section>
-
-
-              <section>
-                  <h2 id="contact">Send us a message</h2>
-
-                  <form method="post">
+                <button class="accordion">Question 1</button>
+                  <div class="panel">
                       <fieldset>
-                          <div class="text">
-                              <label for="sample_form-text">Text<!-- <span class="required">*</span>--></label>
-                              <input id="sample_form-text" type="text" />
-                              <div class="help">Optional</div>
-                          </div>
-                          <div class="password">
-                              <label for="sample_form-password">Email <span class="required">*</span></label>
-                              <input id="sample_form-password" type="email" />
-                              <div class="help">Required</div>
-                          </div>
-                      </fieldset>
+                      <p>This is in place of a sample question?</p>
+                        <!--<h4>Textarea</h4>-->
+                        <div class="textarea">
+                            <!--<label for="sample_form-textarea">Textarea</label>-->
+                            <textarea id="sample_form-textarea">I best remember my loved one by their...</textarea>
+                        </div>
+                        <div class="submit">
+                            <input type="submit" value="Save Draft" /><span> </span><input type="submit" value="Publish" />
+                        </div>
+                    </fieldset>
+                  </div>
 
+                  <button class="accordion">Question 2</button>
+                  <div class="panel">
                       <fieldset>
-                          <!--<h4>Textarea</h4>-->
-                          <div class="textarea">
-                              <!--<label for="sample_form-textarea">Textarea</label>-->
-                              <textarea id="sample_form-textarea">Message...</textarea>
-                          </div>
-                          <div class="submit">
-                              <input type="submit" value="Submit" />
-                          </div>
+                      <p>This is in place of a sample question?</p>
+                        <!--<h4>Textarea</h4>-->
+                        <div class="textarea">
+                            <!--<label for="sample_form-textarea">Textarea</label>-->
+                            <textarea id="sample_form-textarea">I best remember my loved one by their...</textarea>
+                        </div>
+                        <div class="submit">
+                            <input type="submit" value="Save Draft" /><span> </span><input type="submit" value="Publish" />
+                        </div>
                       </fieldset>
-                  </form>
-              </section>
-          </div>
-      </div>
+                  </div>
+                  <button class="accordion">Question 3</button>
+                  <div class="panel">
+                      <fieldset>
+                      <p>This is in place of a sample question?</p>
+                        <!--<h4>Textarea</h4>-->
+                        <div class="textarea">
+                            <!--<label for="sample_form-textarea">Textarea</label>-->
+                            <textarea id="sample_form-textarea">I best remember my loved one by their...</textarea>
+                        </div>
+                        <div class="submit">
+                            <input type="submit" value="Save Draft" /><span> </span><input type="submit" value="Publish" />
+                        </div>
+                      </fieldset>
+                  </div>
+                  <button class="accordion">Question 4</button>
+                  <div class="panel">
+                      <fieldset>
+                      <p>This is in place of a sample question?</p>
+                        <!--<h4>Textarea</h4>-->
+                        <div class="textarea">
+                            <!--<label for="sample_form-textarea">Textarea</label>-->
+                            <textarea id="sample_form-textarea">I best remember my loved one by their...</textarea>
+                        </div>
+                        <div class="submit">
+                            <input type="submit" value="Save Draft" /><span> </span><input type="submit" value="Publish" />
+                        </div>
+                      </fieldset>
+                  </div>
 
+                  <button class="accordion">Question 5</button>
+                  <div class="panel">
+                      <fieldset>
+                      <p>This is in place of a sample question?</p>
+                        <!--<h4>Textarea</h4>-->
+                        <div class="textarea">
+                            <!--<label for="sample_form-textarea">Textarea</label>-->
+                            <textarea id="sample_form-textarea">I best remember my loved one by their...</textarea>
+                        </div>
+                        <div class="submit">
+                            <input type="submit" value="Save Draft" /><span> </span><input type="submit" value="Publish" />
+                        </div>
+                      </fieldset>
+                  </div>
+
+                  <button class="accordion">Question 6</button>
+                  <div class="panel">
+                      <fieldset>
+                      <p>This is in place of a sample question?</p>
+                        <!--<h4>Textarea</h4>-->
+                        <div class="textarea">
+                            <!--<label for="sample_form-textarea">Textarea</label>-->
+                            <textarea id="sample_form-textarea">I best remember my loved one by their...</textarea>
+                        </div>
+                        <div class="submit">
+                            <input type="submit" value="Save Draft" /><span> </span><input type="submit" value="Publish" />
+                        </div>
+                      </fieldset>
+                  </div>
+
+                  <button class="accordion">Question 7</button>
+                  <div class="panel">
+                      <fieldset>
+                      <p>This is in place of a sample question?</p>
+                        <!--<h4>Textarea</h4>-->
+                        <div class="textarea">
+                            <!--<label for="sample_form-textarea">Textarea</label>-->
+                            <textarea id="sample_form-textarea">I best remember my loved one by their...</textarea>
+                        </div>
+                        <div class="submit">
+                            <input type="submit" value="Save Draft" /><span> </span><input type="submit" value="Publish" />
+                        </div>
+                      </fieldset>
+                  </div>
+
+                  <button class="accordion">Question 8</button>
+                  <div class="panel">
+                      <fieldset>
+                      <p>This is in place of a sample question?</p>
+                        <!--<h4>Textarea</h4>-->
+                        <div class="textarea">
+                            <!--<label for="sample_form-textarea">Textarea</label>-->
+                            <textarea id="sample_form-textarea">I best remember my loved one by their...</textarea>
+                        </div>
+                        <div class="submit">
+                            <input type="submit" value="Save Draft" /><span> </span><input type="submit" value="Publish" />
+                        </div>
+                      </fieldset>
+                  </div>
+
+                  <button class="accordion">Question 9</button>
+                  <div class="panel">
+                      <fieldset>
+                      <p>This is in place of a sample question?</p>
+                        <!--<h4>Textarea</h4>-->
+                        <div class="textarea">
+                            <!--<label for="sample_form-textarea">Textarea</label>-->
+                            <textarea id="sample_form-textarea">I best remember my loved one by their...</textarea>
+                        </div>
+                        <div class="submit">
+                            <input type="submit" value="Save Draft" /><span> </span><input type="submit" value="Publish" />
+                        </div>
+                      </fieldset>
+                  </div>
+
+                  <button class="accordion">Question 10</button>
+                  <div class="panel">
+                      <fieldset>
+                      <p>This is in place of a sample question?</p>
+                        <!--<h4>Textarea</h4>-->
+                        <div class="textarea">
+                            <!--<label for="sample_form-textarea">Textarea</label>-->
+                            <textarea id="sample_form-textarea">I best remember my loved one by their...</textarea>
+                        </div>
+                        <div class="submit">
+                            <input type="submit" value="Save Draft" /><span> </span><input type="submit" value="Publish" />
+                        </div>
+                      </fieldset>
+                  </div>
+            </div>
+        </div>
+        <div class="progressdiv">
+            <center class="progressdiv"><input type="submit" value="Save Progress" /><span> </span><input type="submit" value="Move to Next" /></center>
             <footer class="primary">
-                <div class="container">
-                    <div class="wrapper">
-                        <div class="branding">
-                            <!--<a href="https://github.com/imarc/boilerplate">
-                                <img src="img/logo-boilerplate.png" alt="Imarc Boilerplate" />
-                            </a>-->
-                            <p>
-                                Cincinnati, OH 45255 <br>
-                                513-568-3374
-                            </p>
-                        </div>
-                        <nav>
-                            <ul>
-                                <li>
-                                  <a href="#" data-toggle="modal" onclick="setTimeout(function(){openTab(event, 'login');},100);" data-target="#login-modal">Login</a>
-                                </li>
-                                <li>
-                                    <a href="">News</a>
-                                </li>
-                                <li>
-                                    <a href="#contact">Contact</a>
-                                </li>
-                                <li>
-                                    <a href="">About</a>
-                                </li>
-                            </ul>
-                        </nav>
-                        <div>
-                            <ul class="social">
-                                <li class="facebook">
-                                    <a aria-label="Visit us on Facebook" href="https://www.facebook.com/accesshelp">
-                                        <i class="fab fa-facebook-f"></i>
-                                    </a>
-                                </li>
-                                <li class="twitter">
-                                    <a aria-label="Visit us on Twitter" href="https://www.twitter.com/accesshelp">
-                                        <i class="fab fa-twitter"></i>
-                                    </a>
-                                </li>
-                                <li class="linkedin">
-                                    <a aria-label="Visit us on Linkedin" href="https://www.linkedin.com/company/accesshelp">
-                                        <i class="fab fa-linkedin"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
                 <div class="legal">
                     <p>©2018 Universally Thinking</p>
-                    <a href="">Terms</a>
-                    <a href="">Privacy Policy</a>
                 </div>
             </footer>
-
+        </div>
+   </div>
+</div>
         <div id="responsive-tester"><span></span></div>
 
         <script src="js/manifest.js"></script>
         <script src="js/vendor.js"></script>
         <script src="js/app.js"></script>
+        <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
 
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+              $(this).next("div").toggleClass("show");
+
+              if($(this).index()/2>3) {
+                this.scrollIntoView();
+              } else {
+                $(".hero")[0].scrollIntoView();
+                //$(document).scrollTop($(document).scrollTop() - 100);
+              }
+              $(".accordion").not(this).removeClass("active");
+              $(".accordion").not(this).next("div").removeClass("show");
+              this.classList.toggle("active");
+          });
+        }
+        </script>
     </body>
 </html>

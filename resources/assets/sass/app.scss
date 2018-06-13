@@ -108,8 +108,8 @@ $large:  $mq-large;
 @import "components";
 
 ///
-/// = Normalize = 
-/// 
+/// = Normalize =
+///
 
 @include normalize();
 
@@ -192,7 +192,7 @@ html {
     -ms-text-size-adjust: 100%;
 }
 
-*, 
+*,
 *::before,
 *::after {
     box-sizing: inherit;
@@ -404,7 +404,7 @@ form.search {
 }
 
 .torso {
-    padding-bottom: 3rem;
+    padding-bottom: 0;
     padding-top: 3rem;
 }
 
@@ -477,7 +477,7 @@ nav.supplemental {
 }
 
 footer.primary {
-    background-color: $charcoal;
+    background-color: #a7a7a7;
     color: #FFF;
     font-size: 0.9rem;
     padding: 3rem 0;
@@ -943,8 +943,8 @@ table {
 
 }
 
-@include media-large { 
-    
+@include media-large {
+
     ///
     /// = Layout =
     ///
